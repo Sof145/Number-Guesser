@@ -1,0 +1,90 @@
+﻿body {
+    background-color: rgb(242, 244, 246);
+    color: rgb(106, 124, 143);
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 50px; 
+}
+
+footer {
+    background-color: rgb(41, 48, 55);
+    display: flex;
+    justify-content: space-around;
+}
+
+footer div{
+    color: rgb(242, 224, 185);
+    margin: 13px 0 20px 0;
+    width: 30%;
+}
+
+
+section{
+    border: 1px solid none;
+    display: flex;
+    justify-content: space-around;  
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 680px;
+    min-width: 300px;
+}
+
+section div {
+    background-color: lightblue;
+    height: 300px;
+    margin: 15px 0;
+    width: 310px;
+}
+
+section h5{
+    line-height: 1px;
+    font-size: 55px;
+}
+
+
+section .user{
+    border: 1px solid black;
+    background-color: rgb(242, 244, 246);
+}
+
+
+.user h6 {
+    border: 1px solid rgb(41, 48, 56);
+    font-size: 27px;
+    margin: 0px auto;
+    padding: 31px 0;
+    width: 32%;
+}
+
+.user p {
+    display: inline-block;
+    background-color: lightblue;
+    border: 1px solid black;
+    border-radius: 8px;
+    color: rgb(41, 48, 56);
+    padding: 5px 0px;
+    margin: 5px 0;
+    width: 35px;
+}
+
+.user .boton {
+    border: 1px solid none;
+    border-radius: 5px;
+    background-color: lightblue;
+    font-size: 17px;
+    padding: 5px 0;
+    margin: 5px auto;
+    width: 150px;
+}
+
+.proxima_ronda {
+    border: 2px solid lightblue;
+    font-size: 19px;
+    padding: 10px 0;
+    margin: 0px auto;
+    margin-bottom: 50px;
+    width: 142px;
+}
+
