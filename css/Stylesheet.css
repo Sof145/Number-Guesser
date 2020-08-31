@@ -9,7 +9,7 @@ h1{
 }
 
 footer {
-    background-color: rgb(41, 48, 55);
+    background-color: rgb(45 , 75, 95);
     display: flex;
     justify-content: space-around;
 }
@@ -49,6 +49,15 @@ section .user{
     background-color: rgb(242, 244, 246);
 }
 
+.user button {
+    background-color: lightblue;
+    border-radius: 8px;
+    color: rgb(41, 48, 56);
+    padding: 3px 0px;
+    cursor: pointer;
+    margin: 5px 0;
+    width: 35px;
+}
 
 .user h6 {
     border: 1px solid rgb(41, 48, 56);
@@ -58,33 +67,23 @@ section .user{
     width: 32%;
 }
 
-.user p {
-    display: inline-block;
-    background-color: lightblue;
-    border: 1px solid black;
-    border-radius: 8px;
-    color: rgb(41, 48, 56);
-    padding: 5px 0px;
-    margin: 5px 0;
-    width: 35px;
-}
-
-.user .boton {
+.user .adivina_numero {
     border: 1px solid none;
     border-radius: 5px;
     background-color: lightblue;
     font-size: 17px;
-    padding: 5px 0;
+    padding: 7px 0;
+    cursor: pointer;
     margin: 5px auto;
     width: 150px;
 }
 
 .proxima_ronda {
-    border: 2px solid lightblue;
-    font-size: 19px;
-    padding: 10px 0;
+    border: 3px solid lightblue;
+    font-size: 20px;
+    padding: 10px 2px;
     margin: 0px auto;
-    margin-bottom: 50px;
+    margin-bottom: 46px;
     width: 142px;
 }
 
