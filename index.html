@@ -1,36 +1,35 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <link href="css/Normalize.css" rel="stylesheet"/>
-    <link href="css/Stylesheet.css" rel="stylesheet"/>
+    <link href="css/Normalize.css" rel="stylesheet" />
+    <link href="css/Stylesheet.css" rel="stylesheet" />
     <meta charset="utf-8" />
-    <script src="javaScript/JavaScript.js" language="javascript" type="text/javascript"></script>
     <title></title>
 </head>
 <body>
     <h1>Adivina el Numero!</h1>
     <h2>Ronda 1</h2>
-    <h3>Numero clave: ?</h3>
+    <h3 id="numero_clave">Numero clave: ?</h3>
     <section>
-        <div class="computer">
+        <div>
             <h3>Computadora</h3>
             <h4>Puntaje: 0</h4>
-            <h5>?</h5>
+            <h5 id="suposicion_computadora">?</h5>
         </div>
         <div class="user">
             <h3>Tu</h3>
             <h4>Puntaje: 0</h4>
-            <h6 id="suposicion_numero">0</h6>
+            <h6 id="suposicion_usuario">0</h6>
             <button id="sum" onclick="actualizarNumero(this.id)">+</button>
             <button id="res" onclick="actualizarNumero(this.id)">-</button>
-            <h1 id="boton_adivina_numero" class="adivina_numero">Adivina el numero</h1>
+            <p id="adivina_numero" class="adivina_numero">Adivina el numero</p>
         </div>
-        <p class="proxima_ronda">Siguiente Ronda</p>
     </section>
+    <p id="proxima_ronda" class="proxima_ronda">Siguiente Ronda</p>
     <footer>
         <div>
             <p>Paso 1</p>
-            <p>Ingrese un numero del 1 al 10.</p>
+            <p>Ingrese un numero del 0 al 10.</p>
         </div>
         <div>
             <p>Paso 2</p>
@@ -41,5 +40,7 @@
             <p>Presione "Siguiente Ronda" para jugar otra vez.</p>
         </div>
     </footer>
+
+    <script src="javaScript/javaScript.js" type="text/javascript" language="javascript"></script>
 </body>
 </html>
