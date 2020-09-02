@@ -1,12 +1,10 @@
 ﻿const botonAdivinarNumero = document.getElementById("adivina_numero");
-const sumar = document.getElementById("sum");
-const restar = document.getElementById("res");
 
-let suposicionComputadora = document.getElementById("suposicion_computadora");
+let suposicionComputadora = document.getElementById("suposicion_computadora")
+
 let suposicionUsuario = document.getElementById("suposicion_usuario");
-let numeroClave = Math.floor(Math.random() * 10);
+let numeroClave = document.getElementById("numero_clave");
 let numUser = 0;
-let numeroComputadora = Math.floor(Math.random() * 10);
 
 
 function actualizarNumero(operadorId) {
@@ -18,10 +16,34 @@ function actualizarNumero(operadorId) {
         suposicionUsuario.innerText = --numUser;
     }
 }
+alert("c1");
+const generarGanador = (numeroUser, numeroComputadora, objetivoNumero) => {
 
-function nombreFuncion() {
+    let diferenciaUsuario = Math.abs(objetivoNumero - numeroUser);
+    let diferenciaComputadora = Math.abs(objetivoNumero - numeroComputadora);
 
-    suposicionComputadora.innerText = numeroComputadora;
+    if (diferenciaComputadora > diferenciaUsuario) {
+        botonAdivinarNumero.innerText = "Ganaste!!!";
+    }
+    else {
+        resutadoComputadora.innerHTML = "La Computadora Gano!!!";
+    }
 }
 
-botonAdivinarNumero.addEventListener("click", nombreFuncion);
+alert("d2");
+const generarNumero = () => {
+
+    let generarNumeroClave = Math.floor(Math.random() * 10);
+    let generarNumeroComputadora = Math.floor(Math.random() * 10);
+    let resultadoComputadora = document.getElementById("resultado_computadora");
+
+    suposicionUsuario = document.getElementById("suposicion_usuario");
+
+    numeroClave.innerText = generarNumeroClave;
+    suposicionComputadora.innerText = generarNumeroComputadora;
+
+    generarGanador(suposicionUsuario, suposicionComputadora, numeroClave);
+}
+
+alert("c3");
+botonAdivinarNumero.addEventListener("click", generarNumero);
