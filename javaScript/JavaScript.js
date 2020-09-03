@@ -52,6 +52,7 @@ const generarGanador = (numeroUser, numeroComputadora, objetivoNumero) => {
     botonAdivinarNumero.style.backgroundColor = "gainsboro";
     botonAdivinarNumero.style.cursor = "auto";
     siguienteRonda.style.backgroundColor = "lightblue";
+    siguienteRonda.style.cursor = "pointer";
 
     suposicionUsuario = document.getElementById("suposicion_usuario");
     suposicionUsuario.disabled = "true";
