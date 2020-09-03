@@ -2,7 +2,7 @@
 <html>
 <head>
     <link href="css/Normalize.css" rel="stylesheet" />
-    <link href="css/Stylesheet.css" rel="stylesheet" />
+    <link href="css/Stylesheet.css" rel="stylesheet">
     <meta charset="utf-8" />
     <title></title>
 </head>
@@ -11,7 +11,7 @@
     <h2 id="ronda">Ronda 1</h2>
     <h3 id="numero_clave">Numero clave: ?</h3>
     <section>
-        <div>
+        <div class="computadora">
             <h3>Computadora</h3>
             <h4 id="puntaje_computadora">Puntaje: 0</h4>
             <h5 id="suposicion_computadora">?</h5>
@@ -20,9 +20,9 @@
         <div class="user">
             <h3>Tu</h3>
             <h4 id="puntaje_usuario">Puntaje: 0</h4>
-            <h6 id="suposicion_usuario">0</h6>
-            <button id="sum" onclick="actualizarNumero(this.id)">+</button>
+            <input id="suposicion_usuario" value="">
             <button id="res" onclick="actualizarNumero(this.id)">-</button>
+            <button id="sum" onclick="actualizarNumero(this.id)">+</button>
             <p id="adivina_numero" class="adivina_numero">Adivina el numero</p>
         </div>
     </section>
@@ -41,6 +41,6 @@
             <p>Presione "Siguiente Ronda" para jugar otra vez.</p>
         </div>
     </footer>
-    <script src="javaScript/JavaScript.js" type="text/javascript" language="javascript"></script>
+    <script src="javaScript/JavaScript.js" type="text/javascript"></script>
 </body>
 </html>

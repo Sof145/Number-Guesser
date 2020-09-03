@@ -1,4 +1,4 @@
-﻿let botonAdivinarNumero = document.getElementById("adivina_numero");
+let botonAdivinarNumero = document.getElementById("adivina_numero");
 const siguienteRonda = document.getElementById("siguiente_ronda");
 
 let suposicionComputadora = document.getElementById("suposicion_computadora");
@@ -32,25 +32,22 @@ const generarGanador = (numeroUser, numeroComputadora, objetivoNumero) => {
     let puntajeUsuario = document.getElementById("puntaje_usuario");
 
 
-
-    if (suposicionComputadora.innerText === suposicionUsuario) {
-
-        botonAdivinarNumero.innerText = "Empate!!!";
-        resultadoComputadora.innerText = "Empate!!!";
-    }
-    else if (diferenciaComputadora > diferenciaUsuario) {
+    if (diferenciaComputadora > diferenciaUsuario) {
 
         botonAdivinarNumero.innerText = "Ganaste!!!";
         puntajeUsuario.innerText = "Puntaje: " + ++numUserPuntaje;
     }
-    
+    else if (diferenciaUsuario === diferenciaComputadora) {
+
+        botonAdivinarNumero.innerText = "Empate!!!";
+        resultadoComputadora.innerText = "Empate!!!";
+    }
     else {
         resultadoComputadora.innerText = "La Computadora Gano!!!";
         puntajeComputadora.innerText = "Puntaje: " + ++numComputadoraPuntaje;
     }
 
     botonAdivinarNumero.style.backgroundColor = "gainsboro";
-    botonAdivinarNumero.style.cursor = "auto";
     siguienteRonda.style.backgroundColor = "lightblue";
 
     suposicionUsuario = document.getElementById("suposicion_usuario");
@@ -62,14 +59,14 @@ const generarGanador = (numeroUser, numeroComputadora, objetivoNumero) => {
 const generarNumero = () => {
 
     let generarNumeroClave = Math.floor(Math.random() * 10);
-    let generarNumeroComputadora = Math.floor(Math.random() * 10);
+    let generarNumeroComputadora = 5;
 
     suposicionUsuario = document.getElementById("suposicion_usuario").value;
 
-
+ 
     if (!(document.getElementById("adivina_numero").innerText === "Ganaste!!!" ||
         document.getElementById("resultado_computadora").innerText === "La Computadora Gano!!!") &&
-        (suposicionUsuario <= 10 && suposicionUsuario >= 0)) {
+        suposicionUsuario<=10) {
 
         numeroClave.innerText = "Numero Clave: " + generarNumeroClave;
         suposicionComputadora.innerText = generarNumeroComputadora;
@@ -77,7 +74,7 @@ const generarNumero = () => {
         generarGanador(suposicionUsuario, generarNumeroComputadora, generarNumeroClave);
 
     }
-
+    
 }
 
 
@@ -88,33 +85,25 @@ const proximaRonda = () => {
         document.getElementById("resultado_computadora").innerText === "Empate!!!") {
 
         let ronda = document.getElementById("ronda");
-        suposicionUsuario = document.getElementById("suposicion_usuario");
 
+        suposicionUsuario = document.getElementById("suposicion_usuario");
         numeroClave.innerText = "Numero clave: " + 0;
         ronda.innerText = "Ronda: " + ++numRonda;
+        suposicionUsuario.value = 0;
+        suposicionUsuario.disabled = "false";
 
-        suposicionComputadora.innerText = "?";
-        suposicionUsuario.disabled = false;
-        suposicionUsuario.value = "";
-
+        alert(suposicionUsuario.disabled);
 
         if (botonAdivinarNumero.innerText === "Ganaste!!!") {
             botonAdivinarNumero.innerText = "Adivina el numero";
-        }
-        else if (botonAdivinarNumero.innerText === "Empate!!!") {
-            botonAdivinarNumero.innerText = "Adivina el numero";
-            resultadoComputadora.innerText = "";
+            botonAdivinarNumero.style.backgroundColor = "lightblue";
         }
         else {
-            resultadoComputadora.innerText = ""
+            resultadoComputadora.innerText = "";
+            botonAdivinarNumero.style.backgroundColor = "lightblue";
         }
 
-
-        botonAdivinarNumero.style.backgroundColor = "lightblue";
-        botonAdivinarNumero.style.cursor = "pointer";
-
         siguienteRonda.style.backgroundColor = "rgb(242, 244, 246)"
-        siguienteRonda.style.cursor = "auto";
     }
 }
 
