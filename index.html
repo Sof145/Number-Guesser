@@ -8,25 +8,25 @@
 </head>
 <body>
     <h1>Adivina el Numero!</h1>
-    <h2>Ronda 1</h2>
+    <h2 id="ronda">Ronda 1</h2>
     <h3 id="numero_clave">Numero clave: ?</h3>
     <section>
         <div>
             <h3>Computadora</h3>
-            <h4>Puntaje: 0</h4>
+            <h4 id="puntaje_computadora">Puntaje: 0</h4>
             <h5 id="suposicion_computadora">?</h5>
             <p id="resultado_computadora"></p>
         </div>
         <div class="user">
             <h3>Tu</h3>
-            <h4>Puntaje: 0</h4>
+            <h4 id="puntaje_usuario">Puntaje: 0</h4>
             <h6 id="suposicion_usuario">0</h6>
             <button id="sum" onclick="actualizarNumero(this.id)">+</button>
             <button id="res" onclick="actualizarNumero(this.id)">-</button>
             <p id="adivina_numero" class="adivina_numero">Adivina el numero</p>
         </div>
     </section>
-    <p id="proxima_ronda" class="proxima_ronda">Siguiente Ronda</p>
+    <p id="siguiente_ronda" class="proxima_ronda">Siguiente Ronda</p>
     <footer>
         <div>
             <p>Paso 1</p>
