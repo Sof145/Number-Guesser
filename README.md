@@ -1,1 +1,1 @@
-Pagina Web para practicar mis conocimientos. El objetivo era que el usuario intentara adivinar un numero dado y compitiera con la computadora en diferentes rondas.
+Web page where the user tries to guess a given number by competing with computer in different rounds.
